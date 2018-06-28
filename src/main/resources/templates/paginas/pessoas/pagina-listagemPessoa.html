@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+	<title>LivroSC</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  
+    <link rel="stylesheet" type="text/css" href="/css/estilo.css" />
+    <link rel="stylesheet" type="text/css" href="/css/css2.css" />
+
+   
+    <link type="text/css" rel="stylesheet" media="screen" href="css/bootstrap.min.css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  
+</head>
+<body>
+<header>
+      <h1 class="float-l">
+        Bem vindos ao livroSC!
+      </h1>
+      
+      <input type="checkbox" id="control-nav" />
+      <label for="control-nav" class="control-nav"></label>
+      <label for="control-nav" class="control-nav-close"></label>
+
+      <nav class="float-r">
+        <ul class="list-auto">
+          <li>
+            <a href="/paginaInicial" title="Página Inicial">Página Inicial</a>
+          </li>
+          <li>
+            <a href="/produto/listar" title="Produtos">Produtos</a>
+          </li>
+          <li>
+            <a href="/sobrenos" title="Sobre nós">Sobre nós</a>
+          </li>
+          <li>
+            <a href="/contato" title="Contato">Contato</a>
+          </li>
+          <li>
+            <a href="/cadastro" title="Contato">Cadastro</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+<br>
+<br>
+<br>
+<br>
+ 
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Nome</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    <tr th:each="pessoa : ${TodasAsPessoas}">
+      <td th:text="${pessoa.id}"></td>
+      <td th:text="${pessoa.nome}"></td>
+      <td> <a th:href="@{/pessoa/{id}(id = ${pessoa.id})}"><button type="button" class="btn btn-primary">Atualizar</button></a> </td>
+      <td> <a class="btn btn-danger" th:href="@{/pessoa/excluir/{id}(id = ${pessoa.id})}"> Excluir </a> </td>
+         
+    </tr>
+  
+  </tbody>
+</table>
+
+<!-- 
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Preco</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr th:each="produto : ${todosOsProdutos}">
+      <td th:text="${produto.id}"></td>
+      <td th:text="${produto.nome}"></td>
+      <td th:text = "${produto.preco}"></td>
+      <td> <a th:href="@{/produto/{id}(id = ${produto.id})}"><button type="button" class="btn btn-primary">Atualizar</button></a> </td>
+      <td> <a class="btn btn-danger" th:href="@{/produto/excluir/{id}(id = ${produto.id})}"> Excluir </a> </td>
+      <td> <img alt="" th:src="@{'img/'+${produto.nome}+.png}"/> </td>
+      
+    </tr>
+  
+  </tbody>
+</table>
+-->
+<footer id="rodape">
+      <p>
+        
+        <div class="escrita">
+        
+        <p> Telefone: (85) 3467-9034 -- Fundada em 2009 -- 
+          Criado por Sara Cibelle Queiroz 
+          
+        </p>
+
+      </div>
+    </footer>
+
+
+<script src="/js/bootstrap.min.js">  </script>
+
+</body>
+</html>

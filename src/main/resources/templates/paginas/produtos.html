@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+	<meta charset="UTF-8">
+
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+	<title>LivroSC</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  
+    <link rel="stylesheet" type="text/css" href="/css/estilo.css" />
+    <link rel="stylesheet" type="text/css" href="/css/css2.css" />
+
+   
+    <link type="text/css" rel="stylesheet" media="screen" href="css/bootstrap.min.css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  
+</head>
+  <body >
+    <header>
+      <h1 class="float-l">
+        Bem vindos ao livroSC!
+      </h1>
+      
+      <input type="checkbox" id="control-nav" />
+      <label for="control-nav" class="control-nav"></label>
+      <label for="control-nav" class="control-nav-close"></label>
+
+      <nav class="float-r">
+        <ul class="list-auto">
+          <li>
+            <a href="/paginaInicial" title="Página Inicial">Página Inicial</a>
+          </li>
+          <li>
+            <a href="/produto/listar" title="Produtos">Produtos</a>
+          </li>
+          <li>
+            <a href="/sobrenos" title="Sobre nós">Sobre nós</a>
+          </li>
+          <li>
+            <a href="/contato" title="Contato">Contato</a>
+          </li>
+          <li>
+            <a href="/cadastro" title="Contato">Cadastro</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="produtos" >
+      <p>
+        <center><strong>Produtos</strong></center>
+      </p>
+      
+
+      <center>
+      <div class="container">
+        
+        <div class="row">
+
+          <div class="col-md-4 col-sm-12 col-xs-2 col-lg-4">
+
+            <img src="img/livro1.jpg" />
+            <p><strong>Garden manger</strong></p>
+            <p><strong id="promo">De: R$ 179,99 </strong></p>
+            <p><strong>Por: R$ 129,99 </strong></p>
+            <label class="highlights-button" for="modal_promo1">Mostrar mais</label>
+           <br>
+           <br>
+         </div>
+
+          <div class="col-md-4 col-sm-12 col-xs-2 col-lg-4">
+            <img src="img/livro2.jpg" />
+          <p><strong>Desafio infinito</strong></p>
+          <p><strong id="promo">De: R$ 269,99 </strong></p>
+          <p><strong>Por: R$ 229,99 </strong></p>
+          <label class="highlights-button" for="modal_promo2">Mostrar mais</label>
+           <br>
+           <br>
+         </div>
+
+         <div class="col-md-4 col-sm-12 col-xs-2 col-lg-4">
+            <img src="img/livro15.jpg" />
+          <p><strong>Cerveja feita em casa</strong></p>
+          <p><strong id="promo">De: R$ 99,99 </strong></p>
+          <p><strong>Por: R$ 49,99 </strong></p>
+          <label class="highlights-button" for="modal_promo3">Mostrar mais</label>
+          <br>
+          <br>
+         </div>
+
+         <div class="col-md-4 col-sm-12 col-xs-2 col-lg-4">
+
+            <img src="img/livro3.jpg" />
+          <p><strong>Por que fazemos o que fazemos?</strong></p>
+          <p><strong id="promo">De: R$ 59,99 </strong></p>
+          <p><strong>Por: R$ 39,99 </strong></p>
+          <label class="highlights-button" for="modal_promo4">Mostrar mais</label>
+         <br>
+          <br>
+         </div>
+
+          <div class="col-md-4 col-sm-12 col-xs-2 col-lg-4">
+            <img src="img/livro4.jpg" />
+          <p><strong>Vade mecum</strong></p>
+          <p><strong id="promo">De: R$ 132,99 </strong></p>
+          <p><strong>Por: R$ 119,99 </strong></p>
+          <label class="highlights-button" for="modal_promo5">Mostrar mais</label>
+        <br>
+          <br>
+         </div>
+
+         <div class="col-md-4 col-sm-12 col-xs-2 col-lg-4">
+          <img src="img/livro5.jpg" />
+          <p><strong>O mundo do gelo e fogo</strong></p>
+          <p><strong id="promo">De: R$ 58,99 </strong></p>
+          <p><strong>Por: R$ 48,99 </strong></p>
+          <label class="highlights-button" for="modal_promo6">Mostrar mais</label>
+          <br>
+          <br>
+         </div>
+
+        </div>
+      </div>
+       
+      </center>
+
+
+
+    </section>
+
+    <section id="mostraMais">
+
+        <center><label class="highlights-button" for="modal" id="mMais">Ver mais</label></center>
+
+    </section>
+
+
+
+     <script src="js/jquery.min.js"></script>
+     <script type="text/javascript">
+
+      //Quando o botão for acionado, serão adicionados 10 novos livros à página
+      $("#mMais").click(function() {
+
+        $('.row').append("<div class=\"col-md-4 col-sm-12 col-xs-2 col-lg-4\"><img src=\"img/\livro10.jpg\" /><p><strong>Desafio infinito</strong></p><p><strong>Por: R$ 229,99 </strong></p><label class=\"highlights-button\" for=\"modal_livro11\">Mostrar mais</label><br><br></div>");
+        $('.row').append("<div class=\"col-md-4 col-sm-12 col-xs-2 col-lg-4\"><img src=\"img/\livro11.jpg\" /><p><strong>X-men Fabulosos vs Shield</strong></p><p><strong>Por: R$ 79,99 </strong></p><label class=\"highlights-button\" for=\"modal_livro12\">Mostrar mais</label><br><br></div>");
+        $('.row').append("<div class=\"col-md-4 col-sm-12 col-xs-2 col-lg-4\"><img src=\"img/\livro12.jpg\" /><p><strong>Guia definitivo de League of Legends</strong></p><p><strong>Por: R$ 129,99 </strong></p><label class=\"highlights-button\" for=\"modal_livro13\">Mostrar mais</label><br><br></div>");
+        $('.row').append("<div class=\"col-md-4 col-sm-12 col-xs-2 col-lg-4\"><img src=\"img/\livro13.jpg\" /><p><strong>Enciclopédia do chocolate</strong></p><p><strong>Por: R$ 209,99 </strong></p><label class=\"highlights-button\" for=\"modal_livro14\">Mostrar mais</label><br><br></div>");
+        $('.row').append("<div class=\"col-md-4 col-sm-12 col-xs-2 col-lg-4\"><img src=\"img/\livro14.jpg\" /><p><strong>Todas as sextas</strong></p><p><strong>Por: R$ 128,99 </strong></p><label class=\"highlights-button\" for=\"modal_livro15\">Mostrar mais</label><br><br></div>");
+        $('.row').append("<div class=\"col-md-4 col-sm-12 col-xs-2 col-lg-4s\"><img src=\"img/\livro20.jpg\" /><p><strong>1984</strong></p><p><strong>Por: R$ 115,99 </strong></p><label class=\"highlights-button\" for=\"modal_livro16\">Mostrar mais</label><br><br></div>");
+        $('.row').append("<div class=\"col-md-4 col-sm-12 col-xs-2 col-lg-4\"><img src=\"img/\livro16.jpg\" /><p><strong>O lobo de <i>Wall Street</i></strong></p><p><strong>Por: R$ 48,99 </strong></p><label class=\"highlights-button\" for=\"modal_livro17\">Mostrar mais</label><br><br></div>");
+        $('.row').append("<div class=\"col-md-4 col-sm-12 col-xs-2 col-lg-4\"><img src=\"img/\livro17.jpg\" /><p><strong>Alice através do espelho</strong></p><p><strong>Por: R$ 92,99 </strong></p><label class=\"highlights-button\" for=\"modal_livro18\">Mostrar mais</label><br><br></div>");
+        $('.row').append("<div class=\"col-md-4 col-sm-12 col-xs-2 col-lg-4\"><img src=\"img/\livro18.jpg\" /><p><strong>Os contos de Grimm</strong></p><p><strong>Por: R$ 56,99 </strong></p><label class=\"highlights-button\" for=\"modal_livro19\">Mostrar mais</label><br><br></div>");
+        $('.row').append("<div class=\"col-md-4 col-sm-12 col-xs-2 col-lg-4\"><img src=\"img/\livro19.jpg\" /><p><strong>Luz em agosto</strong></p><p><strong>Por: R$ 132,99 </strong></p><label class=\"highlights-button\" for=\"modal_livro20\">Mostrar mais</label><br><br></div>");
+
+        //removendo o botão para que não aconteça mais nenhuma adição
+        $( "#mMais" ).remove();
+               
+
+      });
+
+</script>
+
+    <footer id="rodape">
+      <p>
+        
+        <div class="escrita">
+        
+        <p> Telefone: (85) 3467-9034 -- Fundada em 2009 -- 
+          Criado por Sara Cibelle Queiroz 
+          
+        </p>
+       
+      </h1>   
+      </div>
+    </footer>
+
+   
+  </body>
+</html>

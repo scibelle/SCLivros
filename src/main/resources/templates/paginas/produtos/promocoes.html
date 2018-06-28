@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4" >
+<head>
+	<meta charset="UTF-8">
+
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+	<title>LivroSC</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  
+    <link rel="stylesheet" type="text/css" href="/css/estilo.css" />
+    <link rel="stylesheet" type="text/css" href="/css/css2.css" />
+
+   
+    <link type="text/css" rel="stylesheet" media="screen" href="css/bootstrap.min.css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  
+</head>
+<body>
+<header>
+      <h1 class="float-l">
+        Bem vindos ao livroSC!
+      </h1>
+      
+      <input type="checkbox" id="control-nav" />
+      <label for="control-nav" class="control-nav"></label>
+      <label for="control-nav" class="control-nav-close"></label>
+
+      <nav class="float-r">
+        <ul class="list-auto">
+          <li>
+            <a href="/paginaInicial" title="Página Inicial">Página Inicial</a>
+          </li>
+          <li>
+            <a href="/produto/listar" title="Produtos">Produtos</a>
+          </li>
+          <li>
+            <a href="/sobrenos" title="Sobre nós">Sobre nós</a>
+          </li>
+          <li>
+            <a href="/contato" title="Contato">Contato</a>
+          </li>
+          <li>
+            <a href="/cadastro" title="Cadastro">Cadastro</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+<br>
+<br>
+<br>
+<br>
+<center>
+<section id="promocoes" >
+      <p>
+        <center><strong>Promoções</strong></center>
+      </p>
+      
+    	<div class="container">
+        
+        <div class="row">
+			
+          <div class="col-md-4 col-sm-12 col-xs-2 col-lg-4" th:each="produto : ${todosOsProdutos}">
+          
+             
+				<p><img alt="" th:src="@{'/imagem/'+${produto.nome}+.jpg}"/></p>
+				<p th:text="${produto.nome}"></p>
+	      		<p th:text = "'R$ ' + ${produto.preco}"></p>
+	      		<p > <a th:href="@{/produto/{id}(id = ${produto.id})}"><button type="button" class="highlights-button">Atualizar</button></a> </p>
+	      		<p> <a class="btn btn-danger" th:href="@{/produto/excluir/{id}(id = ${produto.id})}"> Excluir </a> </p>
+
+     
+			</div>
+     
+           <br>
+           <br>
+         </div>
+        </div>
+      </div>
+      
+    </section>
+    </center>
+    
+	
+
+<footer id="rodape">
+      <p>
+        
+        <div class="escrita">
+        
+        <p> Telefone: (85) 3467-9034 -- Fundada em 2009 -- 
+          Criado por Sara Cibelle Queiroz 
+          
+        </p>
+
+      </div>
+    </footer>
+
+
+<script src="/css/bootstrap.min.js">  </script>
+
+</body>
+</html>

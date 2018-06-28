@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+	<title>LivroSC</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  
+    <link rel="stylesheet" type="text/css" href="/css/estilo.css" />
+    <link rel="stylesheet" type="text/css" href="/css/css2.css" />
+
+   
+    <link type="text/css" rel="stylesheet" media="screen" href="css/bootstrap.min.css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  
+</head>
+<body>
+ 
+    <header>
+      <h1 class="float-l">
+        Bem vindos ao livroSC!
+      </h1>
+      
+      <input type="checkbox" id="control-nav" />
+      <label for="control-nav" class="control-nav"></label>
+      <label for="control-nav" class="control-nav-close"></label>
+
+      <nav class="float-r">
+        <ul class="list-auto">
+          <li>
+            <a href="/paginaInicial" title="Página Inicial">Página Inicial</a>
+          </li>
+          <li>
+            <a href="/produto/listar" title="`Produtos">Produtos</a>
+          </li>
+          <li>
+            <a href="/sobrenos" title="Sobre nós">Sobre nós</a>
+          </li>
+          <li>
+            <a href="/contato" title="Contato">Contato</a>
+          </li>
+          <li>
+            <a href="/cadastro" title="Cadastro">Cadastro</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<center>
+<form method="POST" action="/produto/salvar" id="fieldset" enctype="multipart/form-data">
+
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Nome</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" name="nome">
+    
+  </div>
+  
+  <div class="form-group">
+    <label for="examplePreco">Preco</label>
+    <!-- Máscara permite numeros inteiros de 0-9 contendo de 3 a 6 caracteres incluindo a virgula -->
+    <input type="text" class="form-control" id="exampleInputPassword1" name="preco" placeholder="Ex: 000.00" pattern="[0-9,]{3,6}"  >
+  </div>
+  
+ Imagem: <input type="file" name="imagem">
+          <br>
+           <br>
+  <button type="submit" class="highlights-button">Submit</button>
+</form>
+</center>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><br>
+ <footer id="rodape">
+      <p>
+        
+        <div class="escrita">
+        
+        <p> Telefone: (85) 3467-9034 -- Fundada em 2009 -- 
+          Criado por Sara Cibelle Queiroz 
+          
+        </p>
+       
+      </h1>   
+      </div>
+    </footer>
+
+
+<script src="/js/bootstrap.min.js">  </script>
+</body>
+</html>

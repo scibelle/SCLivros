@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+	<meta charset="UTF-8">
+
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+	<title>LivroSC</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  
+    <link rel="stylesheet" type="text/css" href="/css/estilo.css" />
+    <link rel="stylesheet" type="text/css" href="/css/css2.css" />
+
+   
+    <link type="text/css" rel="stylesheet" media="screen" href="css/bootstrap.min.css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  
+</head>
+  <body >
+    <header>
+      <h1 class="float-l">
+        Bem vindos ao livroSC!
+      </h1>
+      
+      <input type="checkbox" id="control-nav" />
+      <label for="control-nav" class="control-nav"></label>
+      <label for="control-nav" class="control-nav-close"></label>
+
+      <nav class="float-r">
+        <ul class="list-auto">
+          <li>
+            <a href="/paginaInicial" title="Página Inicial">Página Inicial</a>
+          </li>
+          <li>
+            <a href="/produto/listar" title="`Produtos">Produtos</a>
+          </li>
+          <li>
+            <a href="/sobrenos" title="Sobre nós">Sobre nós</a>
+          </li>
+          <li>
+            <a href="/contato" title="Contato">Contato</a>
+          </li>
+          <li>
+            <a href="/cadastro" title="Contato">Cadastro</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="contato" >
+      <p>
+        <center><strong>Contato</strong></center>
+      </p>
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-sm-6 col-xs-6 col-lg-12">
+      <form>
+        <center>
+        <fieldset id="fieldset">
+          
+          <label id="labelForm">Nome: </label> <input type="text" name="nome" size="40" placeholder="ex: MARIA ANTONIA ALVES" data-toggle="tooltip" title="MARIA ANTONIA ALVES">
+          <br>
+          <label id="labelForm">E-mail: </label> <input type="E-mail" name="email" size="40" placeholder="ex: mariantonia@gmail.com" data-toggle="tooltip" title="mariantonia@gmail.com">
+          <br>
+          <label id="labelForm">Telefone: </label><input type="text" name="fone" size="40" placeholder="ex: (88) 98725-5692" data-toggle="tooltip" title="(83) 98374-3456" pattern="^[1-9]{2}\-[2-9][0-9]{7,8}$">
+          <br>
+          
+          <label id="labelForm">Mensagem: </label>
+          <br>
+          <textarea id="mensagemContato" maxlength="300" placeholder="Até 300 caracteres" data-toggle="tooltip" title="Tamanho máximo de 300 caracteres"></textarea>
+          <br>
+          <br>
+          <br>
+          
+         <button id="botaoField" class="highlights-button"> Enviar </button>
+
+        </fieldset>
+        </center>
+        <br>
+          <br>
+          <br>
+      </form>
+    </div>
+      </div>
+      </div>
+          <br>
+          <br>
+          <br>
+    </section>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <footer id="rodape">
+      <p>
+        
+        <div class="escrita">
+        
+        <p> Telefone: (85) 3467-9034 -- Fundada em 2009 -- 
+          Criado por Sara Cibelle Queiroz 
+          
+        </p>
+       
+      </h1>   
+      </div>
+    </footer>
+
+  </body>
+</html>
